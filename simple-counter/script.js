@@ -11,26 +11,44 @@
 const countEl = document.getElementById("count-el");
 const increaseBtn = document.getElementById("increase-btn");
 const decreaseBtn = document.getElementById("decrease-btn");
+const resetBtn = document.getElementById("reset-btn");
 let count = 0;
 
-increaseBtn.addEventListener("click", (e) => {
+
+/*function animateBounce(element) {
+    element.classList.add("bounce");
+    void element.offsetWidth;
+    element.classList.remove("bounce");
+}*/
+
+
+increaseBtn.addEventListener("click", () => {
     count++
     countEl.textContent = count;
+    //animateBounce(countEl);
     if (count > 0) {
-        countEl.style.color = "white";
-    }
-    if (count === 0) {
-        countEl.style.color = "black";
-    }
-});
-
-decreaseBtn.addEventListener("click", (e) => {
-    count--
-    countEl.textContent = count;
-    if (count < 0) {
         countEl.style.color = "green";
     }
     if (count === 0) {
         countEl.style.color = "black";
     }
 });
+
+decreaseBtn.addEventListener("click", () => {
+    count--
+    countEl.textContent = count;
+    //animateBounce(countEl);
+    if (count < 0) {
+        countEl.style.color = "red";
+    }
+    if (count === 0) {
+        countEl.style.color = "black";
+    }
+});
+
+resetBtn.addEventListener("click", () => {
+    count = 0;
+    countEl.textContent = count;
+    countEl.style.color = "black";
+    //animateBounce(countEl);
+})
