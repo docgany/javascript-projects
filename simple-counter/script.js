@@ -7,3 +7,30 @@
         - Pressing the plus button increases the count by 1, pressing the minus button decreases by 1
             - Create a Github repository for this project and write Git commits as you go.
 - Send me the project for review and get started on the next project.*/
+
+const countEl = document.getElementById("count-el");
+const increaseBtn = document.getElementById("increase-btn");
+const decreaseBtn = document.getElementById("decrease-btn");
+let count = 0;
+
+increaseBtn.addEventListener("click", (e) => {
+    count++
+    countEl.textContent = count;
+    if (count > 0) {
+        countEl.style.color = "white";
+    }
+    if (count === 0) {
+        countEl.style.color = "black";
+    }
+});
+
+decreaseBtn.addEventListener("click", (e) => {
+    count--
+    countEl.textContent = count;
+    if (count < 0) {
+        countEl.style.color = "green";
+    }
+    if (count === 0) {
+        countEl.style.color = "black";
+    }
+});
