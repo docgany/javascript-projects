@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+div {
+    background-color: inherit;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+p {
+    font-size: 30px;
+}
+
+label {
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+}
+
+select {
+    padding: 15px;
+    width: 390px;
+    font-family: cursive;
+    font-size: 26px;
+    margin-bottom: 35px;
+    background-color: inherit;
+    border: 6px solid grey;
+    border-radius: 20px;
+}
+
+/*button {
+    margin: 20px 0 40px;
+    padding: 15px;
+    width: 200px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    background-color: cadetblue;
+    cursor: pointer;
+    font-family: monospace;
+}*/
+
+option {
+    border-radius: inherit;
+    background-color: inherit;
+    border: inherit;
+}
